@@ -1,3 +1,7 @@
+# vscode
+.history/
+.vscode/
+
 # Logs
 logs
 *.log
@@ -23,6 +27,7 @@ coverage
 *.lcov
 
 # nyc test coverage
+coverage/
 .nyc_output
 
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
@@ -34,12 +39,16 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
+# production
+build/
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
+.pnp/
 
 # TypeScript v1 declaration files
 typings/
@@ -49,6 +58,7 @@ typings/
 
 # Optional npm cache directory
 .npm
+.pnp.js
 
 # Optional eslint cache
 .eslintcache
@@ -102,3 +112,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
