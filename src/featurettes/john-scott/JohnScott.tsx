@@ -49,8 +49,9 @@ export const JohnScott = (props: IJohnScottProps) => {
   return (
     <Featurette
       id="about"
-      mediaContent={<img className="featurette-image" alt="John C. Scott" src={me} />}
-      contentHeader={<>John C. Scott <small>Principal</small></>}
+      className="johnscott"
+      mediaContent={<img alt="John C. Scott" src={me} />}
+      contentHeader={<h2>John C. Scott <small>Principal</small></h2>}
     >
       <>
         <p>10+ years experience in web application development, image and graphics production, and pre-press design and layout. Mass Communication / Print Journalism major from Emerson College in Boston, migrated to digital publishing when journalism jobs dried up. Still inquisitive and maintains skills current with the state of the art.</p>

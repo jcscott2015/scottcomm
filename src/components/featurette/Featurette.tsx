@@ -28,7 +28,7 @@ export const Featurette = (props: IFeaturetteProps) => {
 				{mediaContent}
 			</div>
 			<div className="featurette-content">
-				<h2>{contentHeader}</h2>
+				{contentHeader}
 				{children}
 			</div>
 		</div>

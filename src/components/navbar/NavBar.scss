@@ -47,16 +47,13 @@
             }
         }
     }
-}
-
-// #navbar ul>.active>a,
-// #navbar ul>.active>a:focus,
-// #navbar ul>.active>a:hover {
-//     color: #fff;
-//     background-color: #a74324;
-// }
-@media (min-width: 768px) {
-    .navbar {
+    // #navbar ul>.active>a,
+    // #navbar ul>.active>a:focus,
+    // #navbar ul>.active>a:hover {
+    //     color: #fff;
+    //     background-color: #a74324;
+    // }
+    @media (min-width: 768px) {
         min-height: 75px;
         .navbar-header {
             padding: 0 15px;

@@ -9,15 +9,6 @@
         max-width: 200px;
     }
     .featurette-content {
-        h2 {
-            font-weight: 400;
-            font-size: 30px;
-            margin: 20px 0 10px 0;
-            small {
-                font-size: 20px;
-                font-weight: 300;
-            }
-        }
         p {
             margin: 0 0 20px;
             font-size: 16px;
@@ -39,20 +30,11 @@
             }
         }
     }
-}
-
-@media (min-width: 768px) {
-    .featurette {
+    @media (min-width: 768px) {
         .featurette-media-content {
             max-width: 300px;
         }
         .featurette-content {
-            h2 {
-                font-size: 50px;
-                small {
-                    font-size: 40px;
-                }
-            }
             p {
                 font-size: 21px;
                 &+p {
@@ -61,10 +43,7 @@
             }
         }
     }
-}
-
-@media (min-width: 992px) {
-    .featurette {
+    @media (min-width: 992px) {
         flex-direction: row;
         gap: 0 30px;
         margin-top: 60px;
