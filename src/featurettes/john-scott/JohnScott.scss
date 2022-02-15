@@ -1,0 +1,10 @@
+.featurette-image {
+    max-width: 200px;
+    clip-path: circle(50%);
+}
+
+@media (min-width: 768px) {
+    .featurette-image {
+        max-width: 300px;
+    }
+}

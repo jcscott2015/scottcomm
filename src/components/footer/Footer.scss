@@ -1,0 +1,35 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 100vh;
+    // IE 10+ has issues with position sticky...
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+    width: 100%;
+    height: 2rem;
+    background-color: #06adbe;
+    color: #fff;
+    .container {
+        display: flex;
+        padding: 0 1rem;
+        p {
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            text-align: left;
+            white-space: nowrap;
+            &+p {
+                text-align: right;
+            }
+        }
+        a {
+            color: #a74324;
+            text-decoration: none;
+        }
+    }
+}
