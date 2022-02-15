@@ -2,14 +2,14 @@
     background-color: #fefefe;
     border-bottom: 1px solid #a74324;
     min-height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     .navbar-header {
-        padding: 10px;
+        padding: 0.625rem;
         .nav-menu-btn {
             float: right;
         }
         .nav-menu-list {
-            margin: 11px -15px 0 -15px;
+            margin: 11px -0.938rem 0 -0.938rem;
             border-bottom: 1px solid #a74324;
             &.closed {
                 border: none;
@@ -19,7 +19,7 @@
                 li {
                     a {
                         color: #a74324;
-                        padding: 10px 15px;
+                        padding: 0.625rem 0.938rem;
                         &:focus,
                         &:hover {
                             // color: #555;
@@ -41,7 +41,7 @@
     @media (min-width: 768px) {
         min-height: 75px;
         .navbar-header {
-            padding: 0 15px;
+            padding: 0 0.938rem;
             button.mobile-nav {
                 display: none;
             }
@@ -61,10 +61,10 @@
                     float: left;
                     a {
                         color: #a74324;
-                        padding: 10px;
+                        padding: 0.625rem;
                         white-space: nowrap;
-                        padding-top: 20px;
-                        padding-bottom: 10px;
+                        padding-top: 1.25rem;
+                        padding-bottom: 0.625rem;
                         line-height: 45px;
                         font-size: 18px;
                         &:focus,

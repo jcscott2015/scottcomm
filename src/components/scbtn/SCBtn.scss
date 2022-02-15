@@ -6,24 +6,26 @@
     border: none;
     background-color: transparent;
     font-family: inherit;
-    height: 30px;
-    line-height: 30px;
-    font-size: 18px;
+    height: 1.875rem;
+    max-width: 14rem;
+    line-height: 1.5;
+    font-size: 1.125rem;
     color: #a74324;
     white-space: nowrap;
     &:hover {
         color: #071b28;
     }
     &>img {
-        height: 30px;
+        height: 1.875rem;
     }
     @media (min-width: 768px) {
         gap: 0 .75rem;
-        height: 75px;
-        line-height: 70px;
-        font-size: 30px;
+        max-width: 24rem;
+        height: 4.688rem;
+        line-height: 2.28;
+        font-size: 1.875rem;
         img {
-            height: 65px;
+            height: 4.063rem;
         }
     }
 }

@@ -26,7 +26,7 @@ export const ScrollToTopBtn = (props: IScrollToTopBtnProps) => {
 		}
 	};
 
-	// When the user scrolls down 20px from the top of the document, show the button
+	// When the user scrolls down 1.25rem from the top of the document, show the button
 	window.onscroll = scrollFunction;
 
 	const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
