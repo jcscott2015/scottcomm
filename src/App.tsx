@@ -1,17 +1,15 @@
 import React from 'react';
 import Footer from './components/footer/Footer';
-import Navigation from './components/navigation/Navigation';
+import Header from './components/header/Header';
 import JohnScott from './featurettes/john-scott/JohnScott';
 import './App.css';
 
 const App = () => {
   return (
     <div className="App">
-      <header>
-        <Navigation />
-      </header>
+      <Header />
       <main>
-        <JohnScott/>
+        <JohnScott />
       </main>
       <Footer />
     </div >

@@ -9,15 +9,20 @@
  * @link               http://www.scottcomm.com/
  */
 import React from 'react';
+import './Header.scss';
+import Navigation from '../navigation/Navigation';
+import SCBtn from '../scbtn/SCBtn';
 
 export interface IHeaderProps {
 };
 
 export const Header = (props: IHeaderProps) => {
-  return (
-	<div>
-	</div>
-  );
+	return (
+		<div className="header">
+			<SCBtn href="/">Scott Communications</SCBtn>
+			<Navigation />
+		</div>
+	);
 };
 
 export default Header;

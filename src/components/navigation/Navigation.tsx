@@ -11,6 +11,7 @@
 import React from 'react';
 import './Navigation.scss';
 import NavMenuBtn from '../nav-menu-btn/NavMenuBtn';
+import NavBar from '../navbar/NavBar';
 
 export interface INavigationProps {
 };
@@ -18,6 +19,7 @@ export interface INavigationProps {
 export const Navigation = (props: INavigationProps) => {
 	return (
 		<div className="navigation">
+			<NavBar />
 			<NavMenuBtn className="nav-menu-btn" navListClassName="nav-menu-list" />
 		</div>
 	);

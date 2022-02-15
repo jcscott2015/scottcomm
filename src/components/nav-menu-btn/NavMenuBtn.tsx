@@ -18,6 +18,35 @@ export interface INavMenuBtnProps {
 };
 
 export const NavMenuBtn = (props: INavMenuBtnProps) => {
+	/* TODO: Dynamically load nav from JSON data. */
+	interface INavigation {
+		href: string;
+		title: string;
+		text: string;
+	}
+	const navigation: INavigation[] = [
+		{
+			href: '/',
+			title: 'Scott Communications Home',
+			text: 'Home'
+		},
+		{
+			href: '/web',
+			title: 'Web Application Development',
+			text: 'Web'
+		},
+		{
+			href: '/hardware',
+			title: 'Hardware UI/UX Development',
+			text: 'Hardware UI/UX'
+		},
+		{
+			href: '/production',
+			title: 'Image and Print Development',
+			text: 'Production Artist'
+		}
+	];
+
 	const [ariaExpanded, setAriaExpanded] = React.useState(false);
 
 	const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
@@ -28,7 +57,7 @@ export const NavMenuBtn = (props: INavMenuBtnProps) => {
 	return (
 		<div className="responsive-nav">
 			<button
-				className={`responsive-nav-btn ${props.className}`}
+				className={`responsive-nav-btn ${props.className || ''}`}
 				type="button"
 				aria-expanded={ariaExpanded}
 				aria-controls="navlist"
@@ -38,13 +67,17 @@ export const NavMenuBtn = (props: INavMenuBtnProps) => {
 				<span className="icon-bar"></span>
 				<span className="icon-bar"></span>
 			</button>
-			<div id="navlist" className={`responsive-nav-list ${props.navListClassName} ${ariaExpanded ? '' : 'closed'}`}>
+			<div
+				id="navlist"
+				className={
+					`responsive-nav-list ${props.navListClassName || ''} ${ariaExpanded ? '' : 'closed'}`
+				}>
 				<ul>
-					{/* Dynamically load nav from JSON data. */}
-					<li><a href="/" title="Scott Communications Home">Home</a></li>
-					<li><a href="web.php" title="Web Application Development">Web</a></li>
-					<li><a href="hardware.php" title="Hardware UI/UX Development">Hardware UI/UX</a></li>
-					<li><a href="production.php" title="Image and Print Development">Production Artist</a></li>
+					{navigation.map((v, i) => (
+						<li key={i}>
+							<a href={v.href} title={v.title}>{v.text}</a>
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>

@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefefe;
+    border-bottom: 1px solid #a74324;
+    min-height: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    .scbtn {
+        flex: 1 1 30%;
+    }
+    .navbar {
+        flex: 2 2 60%;
+    }
+}

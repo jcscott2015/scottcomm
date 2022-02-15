@@ -21,7 +21,7 @@ export interface IFeaturetteProps {
 };
 
 export const Featurette = (props: IFeaturetteProps) => {
-	const { id, className, mediaContent, contentHeader, children } = props;
+	const { id, className = null, mediaContent, contentHeader, children } = props;
 	return (
 		<div id={id} className={`featurette ${className}`}>
 			<div className="featurette-media-content">

@@ -10,30 +10,49 @@
  */
 import React from 'react';
 import './NavBar.scss';
-import SCLink from '../scbtn/SCBtn';
-import NavMenuBtn from '../nav-menu-btn/NavMenuBtn';
 
 export interface INavBarProps {
 };
 
 export const NavBar = (props: INavBarProps) => {
-	// const Controls: React.FC = () => (
-	// 	<div id="navbar">
-	// 		<ul>
-	// 			<li><a href="/" title="Scott Communications Home">Home</a></li>
-	// 			<li><a href="web.php" title="Web Application Development">Web</a></li>
-	// 			<li><a href="hardware.php" title="Hardware UI/UX Development">Hardware UI/UX</a></li>
-	// 			<li><a href="production.php" title="Image and Print Development">Production Artist</a></li>
-	// 		</ul>
-	// 	</div>
-	// );
+	/* TODO: Dynamically load nav from JSON data. */
+	interface INavigation {
+		href: string;
+		title: string;
+		text: string;
+	}
+	const navigation: INavigation[] = [
+		{
+			href: '/',
+			title: 'Scott Communications Home',
+			text: 'Home'
+		},
+		{
+			href: '/web',
+			title: 'Web Application Development',
+			text: 'Web'
+		},
+		{
+			href: '/hardware',
+			title: 'Hardware UI/UX Development',
+			text: 'Hardware UI/UX'
+		},
+		{
+			href: '/production',
+			title: 'Image and Print Development',
+			text: 'Production Artist'
+		}
+	];
+
 	return (
 		<div className="navbar">
-			<div className="navbar-header">
-				<SCLink className="navbar-brand" href="/">Scott Communications</SCLink>
-				<NavMenuBtn className="nav-menu-btn" navListClassName="nav-menu-list" />
-			</div>
-			{/* <Controls /> */}
+			<ul>
+				{navigation.map((v, i) => (
+					<li key={i}>
+						<a href={v.href} title={v.title}>{v.text}</a>
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 };

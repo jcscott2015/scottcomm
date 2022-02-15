@@ -22,7 +22,7 @@ export interface ISCBtnProps {
 export const SCBtn = (props: ISCBtnProps) => {
 	return (
 		<button
-			className={`scbtn ${props.className}`}
+			className={`scbtn ${props.className || ''}`}
 			onClick={() => window.location.href = props.href}
 		>
 			<img src={sclogo} alt="Scott Communications" />
