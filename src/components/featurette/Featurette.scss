@@ -6,16 +6,16 @@
     margin-top: 1.25rem;
     padding: 0.938rem;
     .featurette-media-content {
-        max-width: 200px;
+        max-width: 12.5rem;
     }
     .featurette-content {
         p {
             margin: 0 0 1.25rem;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 100;
             line-height: 1.4;
             &+p {
-                font-size: 14px;
+                font-size: 0.875rem;
                 font-weight: 300;
                 line-height: normal;
                 margin: 0 0 0.625rem;
@@ -32,11 +32,11 @@
     }
     @media (min-width: 768px) {
         .featurette-media-content {
-            max-width: 300px;
+            max-width: 18.75rem;
         }
         .featurette-content {
             p {
-                font-size: 21px;
+                font-size: 1.313rem;
                 &+p {
                     font-size: inherit;
                 }
@@ -45,8 +45,8 @@
     }
     @media (min-width: 992px) {
         flex-direction: row;
-        gap: 0 30px;
-        margin-top: 60px;
+        gap: 0 1.875rem;
+        margin-top: 3.75rem;
         .featurette-media-content {
             flex-basis: 40vw;
         }
