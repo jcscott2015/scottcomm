@@ -18,8 +18,16 @@
         flex: 2 2 60%;
     }
     .responsive-nav {
+        top: 0.625rem;
+        .responsive-nav-btn {
+            // nudge button right to match padding
+            margin-right: 0.625rem;
+        }
         .responsive-nav-list {
-            right: -0.625rem; // cancel out padding 0.625rem of header component
+            margin-top: calc(0.5rem + 1px);
+            ul {
+                width: 100vw;
+            }
         }
     }
 }

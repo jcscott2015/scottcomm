@@ -1,3 +1,8 @@
+html {
+    /* Hide any ugly horizontal overflow due to scrollbar. */
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;

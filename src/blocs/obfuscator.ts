@@ -3,7 +3,7 @@
  * client-side application. The uglified javascript could be scraped.
  * Encoding would have to occur in nodejs server.
  *
- * @category           Business Logic
+ * @category           Utility
  * @package            blocs
  * @author             John C. Scott <jcscott@scottcomm.com>
  * @copyright          2022 John C. Scott, Scott Communications
@@ -11,7 +11,7 @@
  * @link               http://www.scottcomm.com/
  */
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 /**
  * Encode for obfuscation.
@@ -19,7 +19,7 @@ import React from 'react';
  * @param entity boolean - use entity encoding
  * @returns string
  */
-export const encodeStr = (str: string, entity: boolean = false) => {
+export const encodeStr = (str: string, entity: boolean = false): string => {
 	if (entity) {
 		// Unicode entity encoding.
 		return Array.from(str).map((s, i) => {
@@ -37,9 +37,9 @@ export const encodeStr = (str: string, entity: boolean = false) => {
  * Decode and render in JSX.
  * @param tag string - element, 'div' is default for undefined
  * @param encoded_str string - encoded string
- * @returns ReactElement
+ * @returns ReactNode
  */
-export const decodeStr = (tag: string = 'div', encoded_str: string) => {
+export const decodeStr = (tag: string = 'div', encoded_str: string): ReactNode => {
 	const rawHTML = Array.from(encoded_str).map((s, i) => {
 		return String.fromCharCode(encoded_str.charCodeAt(i) - 1);
 	}).join('');
