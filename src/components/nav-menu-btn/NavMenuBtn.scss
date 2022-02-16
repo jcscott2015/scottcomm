@@ -29,7 +29,6 @@
     .responsive-nav-list {
         position: absolute;
         top: 2.6rem;
-        right: -0.625rem; // cancel out padding 0.625rem of header component
         z-index: 20;
         width: 100vw;
         /**

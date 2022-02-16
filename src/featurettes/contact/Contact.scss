@@ -1,0 +1,32 @@
+    .contact {
+        .featurette-content {
+            order: 1;
+        }
+        .featurette-media-content {
+            order: 2;
+        }
+        .map-responsive {
+            position: relative;
+            iframe {
+                width: 18.75rem;
+            }
+        }
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap: 0 1.875rem;
+            .featurette-content {
+                order: 2;
+            }
+            .featurette-media-content {
+                order: 1;
+            }
+        }
+        @media (min-width: 992px) {
+            .featurette-map {
+                iframe {
+                    width: 25rem;
+                }
+                margin-top: 1.25rem;
+            }
+        }
+    }

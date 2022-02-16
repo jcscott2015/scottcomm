@@ -6,12 +6,20 @@
     border-bottom: 1px solid #a74324;
     min-height: 3.125rem;
     margin-bottom: 1.429rem;
-    padding: 0.625rem 0.625rem 0 0.625rem;
+    padding: 0 0.625rem;
+    @media (min-width: 768px) {
+        padding: 0.625rem 0.625rem 0 0.625rem;
+    }
     .scbtn {
         flex: 1 1 30%;
     }
     .navbar {
         margin-top: 0.3rem;
         flex: 2 2 60%;
+    }
+    .responsive-nav {
+        .responsive-nav-list {
+            right: -0.625rem; // cancel out padding 0.625rem of header component
+        }
     }
 }
