@@ -11,7 +11,7 @@
 
 import React from 'react';
 import './SCBtn.scss';
-import sclogo from './sclogo.svg';
+import SCLogo from '../sclogo/SCLogo';
 
 export interface ISCBtnProps {
 	children: React.ReactNode;
@@ -25,7 +25,7 @@ export const SCBtn = (props: ISCBtnProps) => {
 			className={`scbtn ${props.className || ''}`}
 			onClick={() => window.location.href = props.href}
 		>
-			<img src={sclogo} alt="Scott Communications" />
+			<SCLogo />
 			{props.children}
 		</button>
 	);

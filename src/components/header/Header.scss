@@ -5,23 +5,39 @@
     background-color: #fefefe;
     border-bottom: 1px solid #a74324;
     min-height: 3.125rem;
-    margin-bottom: 1.429rem;
+    margin-bottom: 1.25rem;
     padding: 0 0.625rem;
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
         padding: 0.625rem 0.625rem 0 0.625rem;
     }
     .scbtn {
         flex: 1 1 30%;
+        position: absolute;
+        z-index: 50;
+        @media (min-width: 48rem) {
+            position: static;
+            z-index: auto;
+        }
     }
     .navbar {
         margin-top: 0.3rem;
         flex: 2 2 60%;
     }
     .responsive-nav {
+        position: absolute;
+        left: 0;
+        right: 0;
         top: 0.625rem;
+        z-index: 40;
         .responsive-nav-btn {
-            // nudge button right to match padding
-            margin-right: 0.625rem;
+            /**
+             * align-items: end|flex-end causes ul element
+             * to push off the left edge. Don't use that style.
+             * Instead, give the button a fixed width and use
+             * margin-left "auto" to align it right.
+             */
+            max-width: 2.5rem;
+            margin: 0 0.625rem 0 auto;
         }
         .responsive-nav-list {
             margin-top: calc(0.5rem + 1px);

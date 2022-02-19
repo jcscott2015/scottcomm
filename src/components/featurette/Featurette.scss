@@ -40,7 +40,7 @@
             }
         }
     }
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
         h2 {
             font-size: 3.125rem;
             small {
@@ -57,7 +57,7 @@
             }
         }
     }
-    @media (min-width: 992px) {
+    @media (min-width: 62rem) {
         min-width: 40rem;
         flex-direction: row;
         gap: 0 1.875rem;

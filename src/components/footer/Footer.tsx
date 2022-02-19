@@ -18,8 +18,7 @@ const Footer = () => {
 	return (
 		<div className="footer">
 			<div className="container">
-				<p>&#169;1994 - {currYear} Scott Communications.&nbsp;
-					<span>All rights reserved.</span>
+				<p>&#169;1994 - {currYear} <span>Scott Communications.</span> <span>All rights reserved.</span>
 				</p>
 				<p>
 					<ScrollToTopBtn>Back to top</ScrollToTopBtn>

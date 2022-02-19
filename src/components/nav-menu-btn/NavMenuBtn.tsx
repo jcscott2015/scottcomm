@@ -60,6 +60,7 @@ export const NavMenuBtn = (props: INavMenuBtnProps) => {
 				className={`responsive-nav-btn ${props.className || ''}`}
 				type="button"
 				aria-expanded={ariaExpanded}
+				aria-haspopup="menu"
 				aria-controls="navlist"
 				onClick={clickHandler}
 			>
