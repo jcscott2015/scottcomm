@@ -1,0 +1,14 @@
+.carousel-indicator {
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 0 0.125rem;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 0.625rem;
+    &.active {
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: #fff;
+    }
+}

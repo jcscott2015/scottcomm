@@ -2,90 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c00;
+    background-color: #777;
     height: 12.5rem;
     margin: -1.25rem 0 1.25rem 0;
     position: relative;
+    overflow: hidden;
     @media (min-width: 48rem) {
         height: 31.25rem;
-    }
-    .carousel-inner {
-        position: relative;
-        z-index: 5;
-        width: 100%;
-        overflow: hidden;
-        .item {
-            height: 12.5rem;
-            background-color: #777;
-            cursor: pointer;
-            @media (min-width: 48rem) {
-                height: 31.25rem;
-            }
-            // @media not all,
-            // (-webkit-transform-3d) .carousel-inner>.item.active,
-            // .carousel-inner>.item.next.left,
-            // .carousel-inner>.item.prev.right {
-            //     left: 0;
-            //     -webkit-transform: translate3d(0, 0, 0);
-            //     transform: translate3d(0, 0, 0);
-            // }
-            // .carousel-inner>.item {
-            //     -webkit-transition: -webkit-transform .6s ease-in-out;
-            //     -o-transition: -o-transform .6s ease-in-out;
-            //     transition: transform .6s ease-in-out;
-            //     -webkit-backface-visibility: hidden;
-            //     backface-visibility: hidden;
-            //     -webkit-perspective: 1000px;
-            //     perspective: 1000px;
-            // }
-            img {
-                position: relative;
-                top: -3.125rem;
-                // top: auto;
-                bottom: 0;
-                max-width: none;
-                width: 100%;
-                height: auto;
-                margin: 0 auto;
-            }
-            .carousel-caption {
-                position: absolute;
-                color: #fff;
-                text-shadow: none;
-                text-align: center;
-                right: 0;
-                left: 0;
-                bottom: 0.75rem;
-                padding: 0 3rem 1.25rem 3rem;
-                background-color: rgba(0, 0, 0, 0.7);
-                @media(min-width: 48rem) {
-                    padding: 0 5rem 1.25rem 5rem;
-                    bottom: 1.25rem;
-                }
-                h1 {
-                    color: #fff;
-                    font-size: 1.5rem;
-                    font-weight: 400;
-                    line-height: 1.1;
-                    margin: 1.25rem 0 0.75rem 0;
-                    @media(min-width: 48rem) {
-                        font-size: 2.25rem;
-                    }
-                }
-                p {
-                    font-weight: 300;
-                    margin: 0 0 0.75rem 0;
-                    line-height: 1.4;
-                    @media(min-width: 48rem) {
-                        margin-bottom: 1.25rem;
-                        font-size: 1.313rem;
-                    }
-                    span {
-                        white-space: nowrap;
-                    }
-                }
-            }
-        }
     }
     .carousel-indicators {
         position: absolute;
@@ -96,23 +19,9 @@
         left: 0;
         right: 0;
         bottom: 1.25rem;
+        text-align: center;
         @media (min-width: 48rem) {
             bottom: 1.75rem;
-        }
-        text-align: center;
-        &>li {
-            display: inline-block;
-            width: 0.625rem;
-            height: 0.625rem;
-            margin: 0 0.125rem;
-            cursor: pointer;
-            border: 1px solid #fff;
-            border-radius: 0.625rem;
-            &.active {
-                width: 0.75rem;
-                height: 0.75rem;
-                background-color: #fff;
-            }
         }
     }
     .carousel-control {
