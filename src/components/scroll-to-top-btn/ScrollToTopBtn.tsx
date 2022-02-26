@@ -1,17 +1,16 @@
 /**
- * Scroll to top button.
+ * @description Scroll to top button.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           button
- * @package            scroll-to-top-btn
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./ScrollToTopBtn.scss
+ *
+ * @module ScrollToTopBtn
  */
-
 import React from 'react';
 import './ScrollToTopBtn.scss';
-
 export interface IScrollToTopBtnProps {
 	children: React.ReactNode;
 };

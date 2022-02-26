@@ -1,14 +1,17 @@
 /**
- * Simple example of JSX obfuscation. Questionable benefits as this is a single page,
+ * @description Simple example of JSX obfuscation. Questionable benefits as this is a single page,
  * client-side application. The uglified javascript could be scraped.
  * Encoding would have to occur in nodejs server.
+
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
+ * @see {@link https://usehooks-ts.com/react-hook/use-image-on-load}
  *
- * @category           Utility
- * @package            blocs
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     NPM:react.ReactNode
+ *
+ * @module blocs
  */
 
 import React, { ReactNode } from 'react';

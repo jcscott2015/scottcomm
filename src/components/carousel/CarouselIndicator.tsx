@@ -1,12 +1,13 @@
 /**
- * Carousel indicator for Scott Communications site.
+ * @description Carousel indicator for Scott Communications site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Page_segment
- * @package            carousel
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./CarouselIndicator.scss
+ *
+ * @module Carousel
  */
 import React from 'react';
 import './CarouselIndicator.scss';

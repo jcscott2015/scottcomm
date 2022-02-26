@@ -1,12 +1,13 @@
 /**
- * Render DOM strings, usually pulled from data or API, to React Node.
+ * @description Render DOM strings, usually pulled from data or API, to React Node.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Utility
- * @package            blocs
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     NPM:react.ReactNode
+ *
+ * @module blocs
  */
 
 import React, { ReactNode } from 'react';
@@ -17,7 +18,7 @@ import React, { ReactNode } from 'react';
  * @param dom_str string - DOM string
  * @returns ReactNode
  */
-export const renderDomStr = (tag: string = 'div', dom_str: string = ''): ReactNode | string => {
+const renderDomStr = (tag: string = 'div', dom_str: string = ''): ReactNode | string => {
 	if ((dom_str === '') || (dom_str === undefined)) {
 		return '';
 	} else {
@@ -26,3 +27,5 @@ export const renderDomStr = (tag: string = 'div', dom_str: string = ''): ReactNo
 		});
 	}
 };
+
+export default renderDomStr;

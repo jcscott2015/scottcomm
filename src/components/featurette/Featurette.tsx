@@ -1,12 +1,13 @@
 /**
- * Featurette page portion for Scott Communications web site.
+ * @description Featurette page portion for Scott Communications web site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Page_Segment
- * @package            featurette
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./Featurette.scss
+ *
+ * @module Featurette
  */
 
 import React from 'react';
@@ -16,7 +17,7 @@ export interface IFeaturetteProps {
 	id: string;
 	className?: string;
 	mediaContent: React.ReactNode;
-	contentHeader:  React.ReactNode;
+	contentHeader: React.ReactNode;
 	children: React.ReactNode;
 };
 

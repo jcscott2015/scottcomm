@@ -1,13 +1,17 @@
 /**
- * Header for Scott Communications site.
+ * @description Header for Scott Communications site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Page_segment
- * @package            header
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./Header.scss
+ * @requires     ../navigation/Navigation
+ * @requires     ../scbtn/SCBtn
+ *
+ * @module Header
  */
+
 import React from 'react';
 import './Header.scss';
 import Navigation from '../navigation/Navigation';

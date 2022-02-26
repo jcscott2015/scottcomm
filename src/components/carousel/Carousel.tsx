@@ -1,12 +1,21 @@
 /**
- * Carousel for Scott Communications site.
+ * @description Carousel for Scott Communications site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
+ * @see {@link https://github.com/juliencrn/react-gallery/}
  *
- * @category           Page_segment
- * @package            carousel
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./Carousel.scss
+ * @requires     ./Carousel
+ * @requires     ./Carousel.ICarouselItemProps
+ * @requires     ./CarouselIndicator
+ * @requires     ../chevron/Chevron.ChevronRight
+ * @requires     ../chevron/Chevron.ChevronLeft
+ * @requires     ../../hooks/useInterval
+ * @requires     ../../blocs/renderDomStr
+ *
+ * @module Carousel
  */
 import React from 'react';
 import './Carousel.scss';
@@ -14,25 +23,29 @@ import CarouselItem, { ICarouselItemProps } from './CarouselItem';
 import CarouselIndicator from './CarouselIndicator';
 import { ChevronRight, ChevronLeft } from '../chevron/Chevron';
 import useInterval from '../../hooks/useInterval';
-import { renderDomStr } from '../../blocs/renderDomStr';
+import renderDomStr from '../../blocs/renderDomStr';
 export interface ICarouselProps {
 	autoPlay?: number;
 	carouselItems: ICarouselItems[];
 };
 
 export interface ICarouselItems extends ICarouselItemProps {
-	itemCaptionTitle?: string;
-	itemCaption?: string;
+	itemCaptionTitle?: '' | string;
+	itemCaption?: '' | string;
 }
 
-export const Carousel = (props: ICarouselProps) => {
+const Carousel = (props: ICarouselProps) => {
 	interface ICarouselState {
 		itemId?: number;
-		active?: string;
-		slide?: string;
-		slot?: string;
+		active?: '' | 'active';
+		slide?: '' | 'prev' | 'next';
+		slot?: '' | 'right' | 'left';
 	}
-	// Build initial carousel state from carousel items.
+	/**
+	 * Build initial carousel state from all carousel items.
+	 * @param items ICarouselItems[]
+	 * @returns ICarouselState[]
+	 */
 	const carouselState = (items: ICarouselItems[]) => {
 		let ret: ICarouselState[] = [];
 		items.forEach((v, i) => {
@@ -51,6 +64,13 @@ export const Carousel = (props: ICarouselProps) => {
 		setCarouselStates
 	] = React.useState(carouselState(props.carouselItems));
 
+	/**
+	 * Get previous and next slide ids from carouselStates
+	 * using the active slide as a base. If jumpToIndex is specified,
+	 * set previous and next ids to it.
+	 * @param jumpToIndex number
+	 * @returns object
+	 */
 	const getSlideItems = (jumpToIndex?: number) => {
 		const carouselLen = carouselStates.length;
 		const lastIndex = carouselLen - 1;
@@ -76,7 +96,16 @@ export const Carousel = (props: ICarouselProps) => {
 		return { prevIndex, activeIndex, nextIndex };
 	};
 
-	const onSetNonActiveSlots = (slot: string = 'right') => {
+	/**
+	 * Find all non-active items in carouselStates and update the slot
+	 * property to the passed slot string value.
+	 * Slot position must be set BEFORE attempting a slide transition,
+	 * or the new active item could slide in from the wrong side.
+	 * Use a "pre-event" to trigger this handler, or use setTimeout
+	 * to delay the slide action.
+	 * @param slot string 'right' | 'left' defaults tp 'right'
+	 */
+	const onPositionNonActiveSlots = (slot: 'right' | 'left' = 'right') => {
 		let states: ICarouselState[] = [];
 		carouselStates.forEach(so => {
 			let state = { ...so };
@@ -91,6 +120,11 @@ export const Carousel = (props: ICarouselProps) => {
 		setCarouselStates(states);
 	};
 
+	/**
+	 * onClick handler that slides to the previous or "jumpToIndex" item.
+	 * @param e React.MouseEvent<Element>
+	 * @param jumpToIndex number
+	 */
 	const onPrev = (e?: React.MouseEvent<Element>, jumpToIndex?: number) => {
 		if (e !== undefined) e.preventDefault();
 		const { prevIndex, activeIndex } = getSlideItems(jumpToIndex);
@@ -104,6 +138,11 @@ export const Carousel = (props: ICarouselProps) => {
 		setCarouselStates(states);
 	};
 
+	/**
+	 * onClick handler that slides to the next or "jumpToIndex" item.
+	 * @param e React.MouseEvent<Element>
+	 * @param jumpToIndex number
+	 */
 	const onNext = (e?: React.MouseEvent<Element>, jumpToIndex?: number) => {
 		if (e !== undefined) e.preventDefault();
 		const { nextIndex, activeIndex } = getSlideItems(jumpToIndex);
@@ -117,16 +156,21 @@ export const Carousel = (props: ICarouselProps) => {
 		setCarouselStates(states);
 	};
 
-	const onGoToSlide = (e?: React.MouseEvent<Element>, jumpToIndex: number = 0) => {
+	/**
+	 * onClick handler that slides directly to the "jumpToIndex" item.
+	 * @param e React.MouseEvent<Element>
+	 * @param jumpToIndex number default 0
+	 */
+	 const onGoToSlide = (e?: React.MouseEvent<Element>, jumpToIndex: number = 0) => {
 		if (e !== undefined) e.preventDefault();
 		const { activeIndex } = getSlideItems();
 		if (jumpToIndex < activeIndex) {
-			onSetNonActiveSlots('left');
+			onPositionNonActiveSlots('left');
 			setTimeout(() => {
 				onPrev(undefined, jumpToIndex);
 			}, 10);
 		} else if (jumpToIndex > activeIndex) {
-			onSetNonActiveSlots('right');
+			onPositionNonActiveSlots('right');
 			setTimeout(() => {
 				onNext(undefined, jumpToIndex);
 			}, 10);
@@ -138,7 +182,7 @@ export const Carousel = (props: ICarouselProps) => {
 
 	useInterval(() => {
 		setTimeout(() => {
-			onSetNonActiveSlots('right');
+			onPositionNonActiveSlots('right');
 		}, 1000);
 		onNext(undefined);
 	}, looping ? props.autoPlay || null : null);
@@ -163,13 +207,11 @@ export const Carousel = (props: ICarouselProps) => {
 					<CarouselItem
 						key={i}
 						href={v.href}
-						className={
-							`${carouselStates[i].active} ${carouselStates[i].slide} ${carouselStates[i].slot}`
-						}
+						className={[carouselStates[i].active, carouselStates[i].slide, carouselStates[i].slot].join(' ')}
 						imageSrc={v.imageSrc}
 						imageAlt={v.imageAlt}
-						itemCaptionTitle={renderDomStr(undefined, v.itemCaptionTitle || '')}
-						itemCaption={renderDomStr(undefined, v.itemCaption || '')}
+						itemCaptionTitle={renderDomStr(undefined, v.itemCaptionTitle)}
+						itemCaption={renderDomStr(undefined, v.itemCaption)}
 					/>
 				))}
 			</div>
@@ -177,7 +219,7 @@ export const Carousel = (props: ICarouselProps) => {
 				aria-label="Previous"
 				className="left carousel-control"
 				onClick={onPrev}
-				onMouseDown={() => onSetNonActiveSlots('left')}
+				onMouseDown={() => onPositionNonActiveSlots('left')}
 			>
 				<ChevronLeft />
 			</button>
@@ -185,7 +227,7 @@ export const Carousel = (props: ICarouselProps) => {
 				aria-label="Next"
 				className="right carousel-control"
 				onClick={onNext}
-				onMouseDown={() => onSetNonActiveSlots('right')}
+				onMouseDown={() => onPositionNonActiveSlots('right')}
 			>
 				<ChevronRight />
 			</button>

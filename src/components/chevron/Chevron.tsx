@@ -1,12 +1,10 @@
 /**
- * Chevron Icons.
+ * @description Chevron Icons.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Chevron Icons
- * @package            chevron
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @module Chevron
  */
 
 export const ChevronLeft = () => {

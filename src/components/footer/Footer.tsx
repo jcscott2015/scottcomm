@@ -1,12 +1,14 @@
 /**
- * Footer page portion for Scott Communications web site.
+ * @description Footer page portion for Scott Communications web site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Page_Segment
- * @package            Footer
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ../scroll-to-top-btn/ScrollToTopBtn
+ * @requires     ./Footer.scss
+ *
+ * @module Footer
  */
 
 import React from 'react';
@@ -22,7 +24,6 @@ const Footer = () => {
 				</p>
 				<p>
 					<ScrollToTopBtn>Back to top</ScrollToTopBtn>
-					{/* <a href="#">Back to top</a> */}
 				</p>
 			</div>
 		</div>

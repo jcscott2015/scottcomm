@@ -1,53 +1,27 @@
 /**
- * Navigation Bar for Scott Communications site.
+ * @description Navigation Bar for Scott Communications site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Page_segment
- * @package            navbar
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./NavBar.scss
+ * @requires     ../navigation/Navigation.INavigation
+ *
+ * @module NavBar
  */
 import React from 'react';
+import { INavigation } from '../navigation/Navigation';
 import './NavBar.scss';
-
 export interface INavBarProps {
+	navigation: INavigation[];
 };
 
 export const NavBar = (props: INavBarProps) => {
-	/* TODO: Dynamically load nav from JSON data. */
-	interface INavigation {
-		href: string;
-		title: string;
-		text: string;
-	}
-	const navigation: INavigation[] = [
-		{
-			href: '/',
-			title: 'Scott Communications Home',
-			text: 'Home'
-		},
-		{
-			href: '/web',
-			title: 'Web Application Development',
-			text: 'Web'
-		},
-		{
-			href: '/hardware',
-			title: 'Hardware UI/UX Development',
-			text: 'Hardware UI/UX'
-		},
-		{
-			href: '/production',
-			title: 'Image and Print Development',
-			text: 'Production Artist'
-		}
-	];
-
 	return (
 		<div className="navbar">
 			<ul>
-				{navigation.map((v, i) => (
+				{props.navigation.map((v, i) => (
 					<li key={i}>
 						<a href={v.href} title={v.title}>{v.text}</a>
 					</li>

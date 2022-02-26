@@ -1,52 +1,27 @@
 /**
- * Responsive menu button.
+ * @description Responsive menu button.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           button
- * @package            nav-menu-btn
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./NavMenuBtn.scss
+ * @requires     ../navigation/Navigation.INavigation
+ *
+ * @module NavMenuBtn
  */
 
 import React from 'react';
+import { INavigation } from '../navigation/Navigation';
 import './NavMenuBtn.scss';
-
 export interface INavMenuBtnProps {
-	className?: string;
-	navListClassName?: string;
+	className?: '' | string;
+	navListClassName?: '' | string;
+	navigation: INavigation[];
 };
 
 export const NavMenuBtn = (props: INavMenuBtnProps) => {
-	/* TODO: Dynamically load nav from JSON data. */
-	interface INavigation {
-		href: string;
-		title: string;
-		text: string;
-	}
-	const navigation: INavigation[] = [
-		{
-			href: '/',
-			title: 'Scott Communications Home',
-			text: 'Home'
-		},
-		{
-			href: '/web',
-			title: 'Web Application Development',
-			text: 'Web'
-		},
-		{
-			href: '/hardware',
-			title: 'Hardware UI/UX Development',
-			text: 'Hardware UI/UX'
-		},
-		{
-			href: '/production',
-			title: 'Image and Print Development',
-			text: 'Production Artist'
-		}
-	];
-
+	const { className, navListClassName, navigation } = props;
 	const [ariaExpanded, setAriaExpanded] = React.useState(false);
 
 	const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
@@ -57,7 +32,7 @@ export const NavMenuBtn = (props: INavMenuBtnProps) => {
 	return (
 		<div className="responsive-nav">
 			<button
-				className={`responsive-nav-btn ${props.className || ''}`}
+				className={`responsive-nav-btn ${className}`}
 				type="button"
 				aria-expanded={ariaExpanded}
 				aria-haspopup="menu"
@@ -71,7 +46,7 @@ export const NavMenuBtn = (props: INavMenuBtnProps) => {
 			<div
 				id="navlist"
 				className={
-					`responsive-nav-list ${props.navListClassName || ''} ${ariaExpanded ? '' : 'closed'}`
+					`responsive-nav-list ${navListClassName} ${ariaExpanded ? '' : 'closed'}`
 				}>
 				<ul>
 					{navigation.map((v, i) => (

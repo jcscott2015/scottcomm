@@ -1,14 +1,16 @@
 /**
- * John Scott featurette for Scott Communications web site.
+ * @description John Scott featurette for Scott Communications web site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Page_Segment
- * @package            featurettes
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./JohnScott.scss
+ * @requires     ../../components/featurette/Featurette
+ * @requires     ./me.jpg
+ *
+ * @module JohnScott
  */
-
 import React from 'react';
 import Featurette from '../../components/featurette/Featurette';
 import './JohnScott.scss';
@@ -45,6 +47,35 @@ export const JohnScott = (props: IJohnScottProps) => {
       text: 'GitHub'
     }
   ];
+	// const ref = useRef<HTMLDivElement | null>(null)
+	// const entry = useIntersectionObserver(ref, { freezeOnceVisible: true });
+
+	// const {
+	// 	className = '',
+	// 	href = '',
+	// 	imageClassName = '',
+	// 	imageSrc,
+	// 	imageAlt,
+	// 	itemCaptionClassName = '',
+	// 	itemCaptionTitle,
+	// 	itemCaption
+	// } = props;
+
+	// return (
+	// 	<div ref={ref} className={`item ${className}`}>
+	// 		<ProgressiveImage
+	// 			className={imageClassName}
+	// 			onImgClick={() => window.location.href = href}
+	// 			url={imageSrc}
+	// 			thumbUrl={imageSrc}
+	// 			alt={imageAlt}
+	// 			isVisible={Boolean(!!entry?.isIntersecting)} />
+	// 		<div className={`carousel-caption ${itemCaptionClassName}`}>
+	// 			{itemCaptionTitle}
+	// 			{itemCaption}
+	// 		</div>
+	// 	</div>
+	// );
 
   return (
     <Featurette

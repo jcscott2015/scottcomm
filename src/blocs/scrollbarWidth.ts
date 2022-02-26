@@ -1,13 +1,11 @@
 /**
  * @description Determine width of a browser's scrollbar, which
  * can vary from browser to browser and device to device.
- *
- * @category           Utility
- * @package            blocs
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  * @see {@link https://davidwalsh.name/detect-scrollbar-width/}
+ *
  * @example
  * // Get the scrollbar dimension.
  * import scrollbarWidth from './blocs/scrollbarWidth';
@@ -16,6 +14,8 @@
  *   // Set a custom CSS property with the calculated scrollbar width.
  *   document.documentElement.style.setProperty('--scroll-bar-width',`${scrollbarWidth()}px`);
  * });
+ *
+ * @module blocs
  */
 
 /**

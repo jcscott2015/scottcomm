@@ -1,14 +1,16 @@
 /**
- * Contact featurette for Scott Communications web site.
+ * @description Contact featurette for Scott Communications web site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           Page_Segment
- * @package            featurettes
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./Contact.scss
+ * @requires     ../../components/featurette/Featurette
+ * @requires     ../../blocs/obfuscator
+ *
+ * @module Contact
  */
-
 import React from 'react';
 import Featurette from '../../components/featurette/Featurette';
 import './Contact.scss';

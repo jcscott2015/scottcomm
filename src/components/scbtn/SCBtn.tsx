@@ -1,14 +1,15 @@
 /**
- * Logo and button for Scott Communications web site.
+ * @description Logo and button for Scott Communications web site.
+ * @author John C. Scott
+ * @copyright 2022 John C. Scott, Scott Communications
+ * @license https://opensource.org/licenses/MIT MIT
  *
- * @category           component
- * @package            SCBtn
- * @author             John C. Scott <jcscott@scottcomm.com>
- * @copyright          2022 John C. Scott, Scott Communications
- * @license            https://opensource.org/licenses/MIT MIT
- * @link               http://www.scottcomm.com/
+ * @requires     NPM:react
+ * @requires     ./SCBtn.scss
+ * @requires     ../sclogo/SCLogo
+ *
+ * @module SCBtn
  */
-
 import React from 'react';
 import './SCBtn.scss';
 import SCLogo from '../sclogo/SCLogo';
