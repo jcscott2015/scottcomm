@@ -28,7 +28,7 @@ export interface ICarouselItemProps {
 
 export const CarouselItem = (props: ICarouselItemProps) => {
 	const ref = useRef<HTMLDivElement | null>(null)
-	const entry = useIntersectionObserver(ref, { freezeOnceVisible: true });
+	const entry = useIntersectionObserver(ref, {});
 
 	const {
 		className = '',

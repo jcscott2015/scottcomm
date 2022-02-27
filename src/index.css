@@ -1,6 +1,4 @@
 html {
-    /* Hide any ugly horizontal overflow due to scrollbar. */
-    /* overflow-x: hidden; */
     font-family: 'Oswald', sans-serif;
     color: #071b28;
     font-size: 0.875rem;
@@ -10,16 +8,22 @@ html {
 
 body {
     margin: 0;
-    /* padding: 0; */
 }
 
-.h1,
-.h2,
-.h3,
 h1,
 h2,
 h3 {
     color: #5a5a5a;
+}
+
+a {
+    color: #06adbe;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
 }
 
 

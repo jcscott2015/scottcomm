@@ -5,6 +5,7 @@
  * @license https://opensource.org/licenses/MIT MIT
  * @see {@link https://usehooks-ts.com/react-hook/use-intersection-observer}
  * @see {@link https://dev.to/shubhamreacts/progressively-loading-images-in-react-40lg}
+ * @see {@link https://dev.to/shubhamreacts/progressively-loading-images-in-react-40lg}
  *
  * @requires     NPM:react.RefObject
  * @requires     NPM:react.useEffect
@@ -24,15 +25,15 @@ const useIntersectionObserver = (
 		threshold = 0,
 		root = null,
 		rootMargin = '0%',
-		freezeOnceVisible = false,
+		freezeOnceVisible = true, // Once visible, don't repeat interaction effect.
 	}: Args,
 ): IntersectionObserverEntry | undefined => {
 	const [entry, setEntry] = useState<IntersectionObserverEntry>();
 	const frozen = entry?.isIntersecting && freezeOnceVisible;
 
-	const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
+	const updateEntry = ([entry]: IntersectionObserverEntry[]) => {
 		setEntry(entry);
-	}
+	};
 
 	useEffect(() => {
 		const node = elementRef?.current; // DOM Ref
@@ -40,15 +41,14 @@ const useIntersectionObserver = (
 
 		if (!hasIOSupport || frozen || !node) return;
 
-		const observerParams = { threshold, root, rootMargin };
-		const observer = new IntersectionObserver(updateEntry, observerParams);
-
+		const observer = new IntersectionObserver(
+			updateEntry,
+			{ threshold, root, rootMargin }
+		);
 		observer.observe(node);
 
 		return () => observer.disconnect();
-
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [elementRef, JSON.stringify(threshold), root, rootMargin, frozen]);
+	}, [elementRef, threshold, root, rootMargin, frozen]);
 
 	return entry;
 }

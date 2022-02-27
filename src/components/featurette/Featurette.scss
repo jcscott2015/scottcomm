@@ -33,14 +33,6 @@
                 line-height: normal;
                 margin: 0 0 0.625rem;
             }
-            a {
-                color: #06adbe;
-                text-decoration: none;
-                &:hover,
-                &:focus {
-                    text-decoration: underline;
-                }
-            }
         }
     }
     @media (min-width: 48rem) {
