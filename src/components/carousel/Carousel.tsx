@@ -208,6 +208,7 @@ const Carousel = (props: ICarouselProps) => {
 						key={i}
 						href={v.href}
 						className={[carouselStates[i].active, carouselStates[i].slide, carouselStates[i].slot].join(' ')}
+						thumbnailSrc={v.thumbnailSrc}
 						imageSrc={v.imageSrc}
 						imageAlt={v.imageAlt}
 						itemCaptionTitle={renderDomStr(undefined, v.itemCaptionTitle)}

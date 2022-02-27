@@ -16,6 +16,9 @@
             white-space: nowrap;
         }
     }
+    .featurette-media-content {
+        position: relative;
+    }
     .featurette-content {
         p,
         address {
@@ -58,10 +61,10 @@
         }
     }
     @media (min-width: 62rem) {
-        min-width: 40rem;
         flex-direction: row;
         gap: 0 1.875rem;
         .featurette-content {
+            flex: 2;
             padding: 0 0.938rem;
             p>a {
                 text-transform: none;

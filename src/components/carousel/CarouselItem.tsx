@@ -19,6 +19,7 @@ export interface ICarouselItemProps {
 	href?: string;
 	imageClassName?: string;
 	imageSrc: string;
+	thumbnailSrc: string;
 	imageAlt: string;
 	itemCaptionClassName?: string;
 	itemCaptionTitle?: ReactNode;
@@ -34,6 +35,7 @@ export const CarouselItem = (props: ICarouselItemProps) => {
 		href = '',
 		imageClassName = '',
 		imageSrc,
+		thumbnailSrc,
 		imageAlt,
 		itemCaptionClassName = '',
 		itemCaptionTitle,
@@ -41,14 +43,18 @@ export const CarouselItem = (props: ICarouselItemProps) => {
 	} = props;
 
 	return (
-		<div ref={ref} className={`item ${className}`}>
+		<div
+			ref={ref}
+			className={`item ${className}`}
+			onClick={() => window.location.href = href}
+		>
 			<ProgressiveImage
 				className={imageClassName}
-				onImgClick={() => window.location.href = href}
+				thumbUrl={thumbnailSrc}
 				url={imageSrc}
-				thumbUrl={imageSrc}
 				alt={imageAlt}
-				isVisible={Boolean(!!entry?.isIntersecting)} />
+				isVisible={Boolean(!!entry?.isIntersecting)}
+			/>
 			<div className={`carousel-caption ${itemCaptionClassName}`}>
 				{itemCaptionTitle}
 				{itemCaption}

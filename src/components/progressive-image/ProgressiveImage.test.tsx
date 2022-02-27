@@ -22,7 +22,7 @@ describe('ProgressiveImage', () => {
 		url: 'https://via.placeholder.com/1500',
 		thumbUrl: 'https://via.placeholder.com/150',
 		alt: 'text alt',
-		isVisible: true,
+		isVisible: true
 	};
 
 	test('when is loading', () => {

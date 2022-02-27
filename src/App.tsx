@@ -12,6 +12,7 @@ const App = () => {
 		{
 			href: '/web',
 			imageSrc: 'portfolio/web/paon/paon-home.jpg',
+			thumbnailSrc: 'portfolio/web/paon/paon-home-thumbnail.jpg',
 			imageAlt: 'Web Development Portfolio Image',
 			itemCaptionTitle: '<h1>Full Stack Web Development</h1>',
 			itemCaption: '<p>LAMP, Drupal CMS, or custom server applications. REST and client-side javascript. <span>HTML 5</span> and <span>CSS 3</span>.</p>'
@@ -19,6 +20,7 @@ const App = () => {
 		{
 			href: '/hardware',
 			imageSrc: 'portfolio/hardware/jordan/web-ui/jordan-home.jpg',
+			thumbnailSrc: 'portfolio/hardware/jordan/web-ui/jordan-home-thumbnail.jpg',
 			imageAlt: 'Hardware UX and UI Development Portfolio Image',
 			itemCaptionTitle: '<h1>Hardware UX and UI Development</h1>',
 			itemCaption: '<p>Web and mobile UI access to hardware devices.</p>'
@@ -26,6 +28,7 @@ const App = () => {
 		{
 			href: '/production',
 			imageSrc: 'portfolio/production/jones-bartlett/4199X_CVRx_comp_carousel.jpg',
+			thumbnailSrc: 'portfolio/production/jones-bartlett/4199X_CVRx_comp_carousel_thumbnail.jpg',
 			imageAlt: 'Production Artist Portfolio Image',
 			itemCaptionTitle: '<h1>Production Artist</h1>',
 			itemCaption: '<p>Images, illustrations, print layout and color separation.</p>'

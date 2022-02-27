@@ -5,16 +5,23 @@
  * @license https://opensource.org/licenses/MIT MIT
  *
  * @requires     NPM:react
- * @requires     ./JohnScott.scss
+ * @requires     NPM:react.useRef
+ * @requires     ../../hooks/useIntersectionObserver
  * @requires     ../../components/featurette/Featurette
+ * @requires     ../../components/progressive-image/ProgressiveImage
+ * @requires     ./JohnScott.scss
  * @requires     ./me.jpg
+ * @requires     ./me-thumbnail.jpg
  *
  * @module JohnScott
  */
-import React from 'react';
+import React, { useRef } from 'react';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import Featurette from '../../components/featurette/Featurette';
+import ProgressiveImage from '../../components/progressive-image/ProgressiveImage';
 import './JohnScott.scss';
 import me from './me.jpg';
+import meThumbnail from './me-thumbnail.jpg';
 
 export interface IJohnScottProps {
   // id: string;
@@ -47,41 +54,23 @@ export const JohnScott = (props: IJohnScottProps) => {
       text: 'GitHub'
     }
   ];
-	// const ref = useRef<HTMLDivElement | null>(null)
-	// const entry = useIntersectionObserver(ref, { freezeOnceVisible: true });
 
-	// const {
-	// 	className = '',
-	// 	href = '',
-	// 	imageClassName = '',
-	// 	imageSrc,
-	// 	imageAlt,
-	// 	itemCaptionClassName = '',
-	// 	itemCaptionTitle,
-	// 	itemCaption
-	// } = props;
-
-	// return (
-	// 	<div ref={ref} className={`item ${className}`}>
-	// 		<ProgressiveImage
-	// 			className={imageClassName}
-	// 			onImgClick={() => window.location.href = href}
-	// 			url={imageSrc}
-	// 			thumbUrl={imageSrc}
-	// 			alt={imageAlt}
-	// 			isVisible={Boolean(!!entry?.isIntersecting)} />
-	// 		<div className={`carousel-caption ${itemCaptionClassName}`}>
-	// 			{itemCaptionTitle}
-	// 			{itemCaption}
-	// 		</div>
-	// 	</div>
-	// );
+  const ref = useRef<HTMLDivElement | null>(null)
+  const entry = useIntersectionObserver(ref, { freezeOnceVisible: true });
 
   return (
     <Featurette
       id="about"
       className="johnscott"
-      mediaContent={<img alt="John C. Scott" src={me} />}
+      mediaContent={(
+        <div ref={ref}>
+          <ProgressiveImage
+            url={me}
+            thumbUrl={meThumbnail}
+            alt="John C. Scott"
+            isVisible={Boolean(!!entry?.isIntersecting)} />
+        </div>
+      )}
       contentHeader={<h2>John C. Scott <small>Principal</small></h2>}
     >
       <>

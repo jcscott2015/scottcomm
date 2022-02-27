@@ -7,15 +7,11 @@
  *
  * @requires     NPM:react
  * @requires     NPM:react.CSSProperties
- * @requires     ../no-image/NoImage
  * @requires     ../../hooks/useImageOnLoad
- * @requires     ./ProgressiveImage.scss
  *
  * @module ProgressiveImage
  */
 import React, { CSSProperties } from 'react';
-import './ProgressiveImage.scss';
-import NoImage from '../no-image/NoImage';
 import useImageOnLoad from '../../hooks/useImageOnLoad';
 
 export interface ProgressiveImageProps {
@@ -23,7 +19,6 @@ export interface ProgressiveImageProps {
 	thumbUrl?: string;
 	alt?: string;
 	className?: string;
-	onImgClick?: React.MouseEventHandler<HTMLImageElement>;
 	isVisible: boolean;
 }
 
@@ -32,21 +27,18 @@ const ProgressiveImage = ({
 	thumbUrl = '',
 	alt = '',
 	className = '',
-	onImgClick,
 	isVisible
 }: ProgressiveImageProps) => {
-	const { handleImageOnLoad, css } = useImageOnLoad({ filter: 'saturate(0)' });
+	const { handleImageOnLoad, css } = useImageOnLoad();
 
 	const imageStyle: CSSProperties = {
 		objectFit: 'cover',
 		position: 'absolute'
 	};
 
-	const canLoad = isVisible && url && thumbUrl;
-
 	return (
 		<>
-			{canLoad ? (
+			{isVisible && (
 				<>
 					<img
 						style={{ ...css.thumbStyle, ...imageStyle }}
@@ -54,7 +46,6 @@ const ProgressiveImage = ({
 						src={thumbUrl}
 						alt={alt || ''}
 						className={className || ''}
-						onClick={() => (onImgClick ? onImgClick : null)}
 					/>
 					<img
 						onLoad={handleImageOnLoad}
@@ -63,13 +54,8 @@ const ProgressiveImage = ({
 						src={url}
 						alt={alt || ''}
 						className={className || ''}
-						onClick={() => (onImgClick ? onImgClick : null)}
 					/>
 				</>
-			) : (
-				<div className={`noimage-wrapper ${className || ''}`}>
-					<NoImage />
-				</div>
 			)}
 		</>
 	)

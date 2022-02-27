@@ -4,6 +4,7 @@
  * @copyright 2022 John C. Scott, Scott Communications
  * @license https://opensource.org/licenses/MIT MIT
  * @see {@link https://usehooks-ts.com/react-hook/use-intersection-observer}
+ * @see {@link https://dev.to/shubhamreacts/progressively-loading-images-in-react-40lg}
  *
  * @requires     NPM:react.RefObject
  * @requires     NPM:react.useEffect
@@ -27,7 +28,6 @@ const useIntersectionObserver = (
 	}: Args,
 ): IntersectionObserverEntry | undefined => {
 	const [entry, setEntry] = useState<IntersectionObserverEntry>();
-
 	const frozen = entry?.isIntersecting && freezeOnceVisible;
 
 	const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
