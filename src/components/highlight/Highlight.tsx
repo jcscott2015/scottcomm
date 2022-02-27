@@ -33,7 +33,7 @@ export interface IHighlightProps {
 
 export const Highlight = (props: IHighlightProps) => {
 	const {
-		className = null,
+		className = '',
 		data,
 		headerClass = '',
 		contentClass = '',
