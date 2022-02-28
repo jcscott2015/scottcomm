@@ -31,17 +31,34 @@ const ProgressiveImage = ({
 }: ProgressiveImageProps) => {
 	const { handleImageOnLoad, css } = useImageOnLoad();
 
+	const imageWrapper: CSSProperties = {
+		overflow: 'hidden',
+		paddingBottom: '100%',
+		position: 'relative',
+		width: 'auto',
+		height: 'auto'
+	};
+
 	const imageStyle: CSSProperties = {
-		objectFit: 'cover',
-		position: 'absolute'
+		objectFit: 'contain', // maintain aspect ratio of thumbnail to full image
+		position: 'absolute',
+		width: '100%',
+		height: '100%',
+		maxWidth: '100%', // scale to maintain largest aspect ratio
+		maxHeight: '100%', // scale to maintain largest aspect ratio
+		top: '50%',
+		left: '50%',
+		transform: 'translateX(-50%) translateY(-50%)'
 	};
 
 	return (
 		<>
 			{isVisible && (
-				<>
+				<div style={{ ...imageWrapper }}>
 					<img
-						style={{ ...css.thumbStyle, ...imageStyle }}
+						style={{
+							...css.thumbStyle, ...imageStyle
+						}}
 						data-testid="thumb-image"
 						src={thumbUrl}
 						alt={alt || ''}
@@ -49,13 +66,15 @@ const ProgressiveImage = ({
 					/>
 					<img
 						onLoad={handleImageOnLoad}
-						style={{ ...css.fullImageStyle, ...imageStyle }}
+						style={{
+							...css.fullImageStyle, ...imageStyle
+						}}
 						data-testid="regular-image"
 						src={url}
 						alt={alt || ''}
 						className={className || ''}
 					/>
-				</>
+				</div>
 			)}
 		</>
 	)

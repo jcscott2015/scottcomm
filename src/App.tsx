@@ -5,6 +5,7 @@ import Carousel, { ICarouselItems } from './components/carousel/Carousel';
 import Highlight, { IHighlights } from './components/highlight/Highlight';
 import JohnScott from './featurettes/john-scott/JohnScott';
 import Contact from './featurettes/contact/Contact';
+import Portfolio from './components/portfolio/Portfolio';
 
 const App = () => {
 	/* TODO: Dynamically load nav from JSON data. */
@@ -64,6 +65,7 @@ const App = () => {
 				<Highlight data={highlights} />
 				<JohnScott />
 				<Contact />
+				<Portfolio />
 			</main>
 			<Footer />
 		</div >

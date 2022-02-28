@@ -16,7 +16,6 @@ import renderDomStr from '../../blocs/renderDomStr';
 import './Highlight.scss';
 
 export interface IHighlights {
-	className?: string;
 	header: string;
 	content: string;
 	btnText: string;

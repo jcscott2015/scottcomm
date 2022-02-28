@@ -11,8 +11,6 @@
  * @requires     ../../components/featurette/Featurette
  * @requires     ../../components/progressive-image/ProgressiveImage
  * @requires     ./JohnScott.scss
- * @requires     ./me.jpg
- * @requires     ./me-thumbnail.jpg
  *
  * @module JohnScott
  */

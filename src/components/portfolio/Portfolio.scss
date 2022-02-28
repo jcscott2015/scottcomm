@@ -1,0 +1,33 @@
+.portfolios {
+    .portfolio {
+        margin: 1.25rem;
+        h2 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: #067e8e;
+            text-align: center;
+            border-top: 1px solid #a74324;
+            margin-top: 0.625rem;
+            padding-top: 0.625rem;
+        }
+        p {
+            font-weight: 100;
+            margin: 0.625rem 0;
+        }
+        .portfolio-items {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin: 1.25rem;
+            .portfolio-item {
+                flex: 1;
+                img {
+                    cursor: pointer;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
