@@ -1,0 +1,23 @@
+[{
+    "header": "California Avocado Commission",
+    "desc": "A <a href='https://symfony.com/'>Symfony</a> site built with <a href='http://www.reddoor.biz/'>Red Door Interacive</a>. The site has customer, grower, and seller views. The recipe section allows the user to change portions and print the recipe in several sizes dynamically — using CSS with @media queries. The grower locator page uses the <a href='https://developers.google.com/maps/'>Google Maps API</a> to interactively map the grower’s location in their biography.",
+    "items": [{
+            "imgSrc": "portfolio/web/cac/cac_home_page.jpg",
+            "imgThumbnailSrc": "portfolio/web/cac/cac_home_page_thumbnail.jpg",
+            "imgAlt": "California Avocado Commission Home Page",
+            "title": "Home Page"
+        },
+        {
+            "imgSrc": "portfolio/web/cac/cac_recipe_detail.jpg",
+            "imgThumbnailSrc": "portfolio/web/cac/cac_recipe_detail_thumbnail.jpg",
+            "imgAlt": "California Avocado Commission Recipe Detail",
+            "title": "Recipe Detail"
+        },
+        {
+            "imgSrc": "portfolio/web/cac/cac_grower_detail.jpg",
+            "imgThumbnailSrc": "portfolio/web/cac/cac_grower_detail_thumbnail.jpg",
+            "imgAlt": "California Avocado Commission Grower Detail",
+            "title": "Grower Detail"
+        }
+    ]
+}]

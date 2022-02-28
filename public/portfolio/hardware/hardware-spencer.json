@@ -1,0 +1,29 @@
+[{
+    "header": "Spencer",
+    "desc": "The Spencer UI wasn&#8217;t responsive by design but did work well on mobile devices. Spencer is the MiFi UI for Sprint. Sprint left the UI and UX design to the MiFi team. The status bar has some Sprint specific icons, like the snowflake LTE symbol and 6 cell bars.",
+    "items": [{
+            "imgSrc": "portfolio/hardware/spencer/web-ui/spencer-home.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/spencer/web-ui/spencer-home-thumbnail.jpg",
+            "imgAlt": "Spencer Home Page",
+            "title": "Home Page"
+        },
+        {
+            "imgSrc": "portfolio/hardware/spencer/web-ui/spencer-signin.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/spencer/web-ui/spencer-signin-thumbnail.jpg",
+            "imgAlt": "Spencer Sign In Page",
+            "title": "Sign In"
+        },
+        {
+            "imgSrc": "portfolio/hardware/spencer/web-ui/spencer-gps.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/spencer/web-ui/spencer-gps-thumbnail.jpg",
+            "imgAlt": "Spencer GPS Page",
+            "title": "GPS Page"
+        },
+        {
+            "imgSrc": "portfolio/hardware/spencer/web-ui/spencer-settings-port-filtering.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/spencer/web-ui/spencer-settings-port-filtering-thumbnail.jpg",
+            "imgAlt": "Spencer Settings &mdash; Port Filtering",
+            "title": "Settings &mdash; Port Filtering"
+        }
+    ]
+}]

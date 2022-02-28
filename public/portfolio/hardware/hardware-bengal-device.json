@@ -1,0 +1,29 @@
+[{
+    "header": "Bengal",
+    "desc": "The Bengal MiFi device had a high-resolution, full color display. The display UI used the same design elements as the web UI, although it was written in QT. The device UI also supported English, Quebecois, and Arabic. The Bengal MiFi had a large battery that could be used to charge a cellphone.",
+    "items": [{
+            "imgSrc": "portfolio/hardware/bengal/bengal_UCF_animation_big.gif",
+            "imgThumbnailSrc": "portfolio/hardware/bengal/bengal_UCF_animation_big_thumbnail.jpg",
+            "imgAlt": "Bengal Web & Display Info Animation",
+            "title": "Web & Display Info Animation"
+        },
+        {
+            "imgSrc": "portfolio/hardware/bengal/device-ui/carousel-alerts-wifi.svg",
+            "imgThumbnailSrc": "portfolio/hardware/bengal/device-ui/carousel-alerts-wifi-thumbnail.jpg",
+            "imgAlt": "Bengal Device Carousel Data Usage View",
+            "title": "Device Carousel Data Usage View"
+        },
+        {
+            "imgSrc": "portfolio/hardware/bengal/device-ui/carousel-alerts-charging.svg",
+            "imgThumbnailSrc": "portfolio/hardware/bengal/device-ui/carousel-alerts-charging-thumbnail.jpg",
+            "imgAlt": "Bengal Device Carousel Charging View",
+            "title": "Device Carousel Charging View"
+        },
+        {
+            "imgSrc": "portfolio/hardware/bengal/device-ui/carousel-alerts-unlock-sim.svg",
+            "imgThumbnailSrc": "portfolio/hardware/bengal/device-ui/carousel-alerts-unlock-sim-thumbnail.jpg",
+            "imgAlt": "Bengal Device Carousel Unlock SIM View",
+            "title": "Device Carousel Unlock SIM View"
+        }
+    ]
+}]

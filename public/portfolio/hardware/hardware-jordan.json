@@ -1,0 +1,29 @@
+[{
+    "header": "Jordan",
+    "desc": "The Jordan interface was to be the default UI design for all Novatel branded MiFi products. The UI is responsive and was released with English, Spanish, and Quebecois language support. The device UI had matching design elements.",
+    "items": [{
+            "imgSrc": "portfolio/hardware/jordan/web-ui/jordan-home-ans.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/jordan/web-ui/jordan-home-ans-thumbnail.jpg",
+            "imgAlt": "Jordan Desktop Home Page with Notificatione",
+            "title": "Desktop Home Page with Notification"
+        },
+        {
+            "imgSrc": "portfolio/hardware/jordan/web-ui/jordan-gps.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/jordan/web-ui/jordan-gps-thumbnail.jpg",
+            "imgAlt": "Jordan GPS Page with Dynamic Map",
+            "title": "GPS Page with Dynamic Map"
+        },
+        {
+            "imgSrc": "portfolio/hardware/jordan/web-ui/jordan-home-iphone5-vert-menu.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/jordan/web-ui/jordan-home-iphone5-vert-menu-thumbnail.jpg",
+            "imgAlt": "Jordan iPhone 5 Menu",
+            "title": "iPhone 5 Menu"
+        },
+        {
+            "imgSrc": "portfolio/hardware/jordan/web-ui/jordan-preferences-ipad-vert.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/jordan/web-ui/jordan-preferences-ipad-vert-thumbnail.jpg",
+            "imgAlt": "Jordan Preferences Page &mdash; iPad Vertical",
+            "title": "Jordan Preferences Page &mdash; iPad Vertical"
+        }
+    ]
+}]

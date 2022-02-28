@@ -1,0 +1,21 @@
+[{
+        "href": "/",
+        "title": "Scott Communications Home",
+        "text": "Home"
+    },
+    {
+        "href": "/web",
+        "title": "Web Application Development",
+        "text": "Web"
+    },
+    {
+        "href": "/hardware",
+        "title": "Hardware UI/UX Development",
+        "text": "Hardware UI/UX"
+    },
+    {
+        "href": "/production",
+        "title": "Image and Print Development",
+        "text": "Production Artist"
+    }
+]

@@ -1,0 +1,29 @@
+[{
+    "header": "Acartha Technologies Partners",
+    "desc": "Simple HTML and CSS informational site.",
+    "items": [{
+            "imgSrc": "portfolio/web/acartha_technologies/acartha_technologies_home.jpg",
+            "imgThumbnailSrc": "portfolio/web/acartha_technologies/acartha_technologies_home_thumbnail.jpg",
+            "imgAlt": "Acartha Technologies Partners Home Page",
+            "title": "Home Page"
+        },
+        {
+            "imgSrc": "portfolio/web/acartha_technologies/acartha_technologies_opportunity.jpg",
+            "imgThumbnailSrc": "portfolio/web/acartha_technologies/acartha_technologies_opportunity_thumbnail.jpg",
+            "imgAlt": "Acartha Technologies Partners Market Opportunity",
+            "title": "Market Opportunity"
+        },
+        {
+            "imgSrc": "portfolio/web/acartha_technologies/acartha_technologies_team.jpg",
+            "imgThumbnailSrc": "portfolio/web/acartha_technologies/acartha_technologies_team_thumbnail.jpg",
+            "imgAlt": "Acartha Technologies Partners Management Team",
+            "title": "Management Team"
+        },
+        {
+            "imgSrc": "portfolio/web/acartha_technologies/acartha_technologies_companies.jpg",
+            "imgThumbnailSrc": "portfolio/web/acartha_technologies/acartha_technologies_companies_thumbnail.jpg",
+            "imgAlt": "Acartha Technologies Partners Portfolio Companies",
+            "title": "Portfolio Companies"
+        }
+    ]
+}]

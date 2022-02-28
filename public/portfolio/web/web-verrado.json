@@ -1,0 +1,17 @@
+[{
+    "header": "Verrado",
+    "desc": "Marketing sites for <a href='http://verrado.com/'>Verrado, Arizona</a> planned community, still in development at the time. These sites are simple HTML and CSS. The form posts to a server-side CGI.",
+    "items": [{
+            "imgSrc": "portfolio/web/verrado/verrado_discover_series.jpg",
+            "imgThumbnailSrc": "portfolio/web/verrado/verrado_discover_series_thumbnail.jpg",
+            "imgAlt": "Verrado Discover Series",
+            "title": "Verrado Discover Series"
+        },
+        {
+            "imgSrc": "portfolio/web/verrado/verrado_weekend_getaway.jpg",
+            "imgThumbnailSrc": "portfolio/web/verrado/verrado_weekend_getaway_thumbnail.jpg",
+            "imgAlt": "Verrado Weekend Getaway",
+            "title": "Verrado Weekend Getaway"
+        }
+    ]
+}]

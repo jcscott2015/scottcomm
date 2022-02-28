@@ -1,0 +1,29 @@
+[{
+    "header": "Bengal",
+    "desc": "The Bengal interface was the default UI design for all Verizon Jetpack branded MiFi products. Bengal is the MiFi&#8217;s first responsive UI as a design feature. The UI supported English, Quebecois, and Arabic.",
+    "items": [{
+            "imgSrc": "portfolio/hardware/bengal/web-ui/jetpack-home.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/bengal/web-ui/jetpack-home-thumbnail.jpg",
+            "imgAlt": "Bengal Desktop Home Page",
+            "title": "Desktop Home Page"
+        },
+        {
+            "imgSrc": "portfolio/hardware/bengal/web-ui/jetpack-preferences.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/bengal/web-ui/jetpack-preferences-thumbnail.jpg",
+            "imgAlt": "Bengal Preferences Page",
+            "title": "Preferences"
+        },
+        {
+            "imgSrc": "portfolio/hardware/bengal/web-ui/jetpack-connected-devices.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/bengal/web-ui/jetpack-connected-devices-thumbnail.jpg",
+            "imgAlt": "Bengal Connected Devices Page",
+            "title": "Connected Devices"
+        },
+        {
+            "imgSrc": "portfolio/hardware/bengal/web-ui/jetpack-connected-devices-iphone.jpg",
+            "imgThumbnailSrc": "portfolio/hardware/bengal/web-ui/jetpack-connected-devices-iphone-thumbnail.jpg",
+            "imgAlt": "Bengal Connected Devices Page &mdash; iPhone 5 Vertical",
+            "title": "Connected Devices &mdash; iPhone 5 Vertical"
+        }
+    ]
+}]

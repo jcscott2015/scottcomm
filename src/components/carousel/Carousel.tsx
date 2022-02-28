@@ -64,6 +64,8 @@ const Carousel = (props: ICarouselProps) => {
 		setCarouselStates
 	] = React.useState(carouselState(props.carouselItems));
 
+	const carouselLen = carouselStates.length;
+
 	/**
 	 * Get previous and next slide ids from carouselStates
 	 * using the active slide as a base. If jumpToIndex is specified,
@@ -72,7 +74,6 @@ const Carousel = (props: ICarouselProps) => {
 	 * @returns object
 	 */
 	const getSlideItems = (jumpToIndex?: number) => {
-		const carouselLen = carouselStates.length;
 		const lastIndex = carouselLen - 1;
 		let activeIndex = 0,
 			nextIndex = 0,
@@ -161,7 +162,7 @@ const Carousel = (props: ICarouselProps) => {
 	 * @param e React.MouseEvent<Element>
 	 * @param jumpToIndex number default 0
 	 */
-	 const onGoToSlide = (e?: React.MouseEvent<Element>, jumpToIndex: number = 0) => {
+	const onGoToSlide = (e?: React.MouseEvent<Element>, jumpToIndex: number = 0) => {
 		if (e !== undefined) e.preventDefault();
 		const { activeIndex } = getSlideItems();
 		if (jumpToIndex < activeIndex) {
@@ -216,22 +217,24 @@ const Carousel = (props: ICarouselProps) => {
 					/>
 				))}
 			</div>
-			<button
-				aria-label="Previous"
-				className="left carousel-control"
-				onClick={onPrev}
-				onMouseDown={() => onPositionNonActiveSlots('left')}
-			>
-				<ChevronLeft />
-			</button>
-			<button
-				aria-label="Next"
-				className="right carousel-control"
-				onClick={onNext}
-				onMouseDown={() => onPositionNonActiveSlots('right')}
-			>
-				<ChevronRight />
-			</button>
+			{(carouselLen > 1) && <>
+				<button
+					aria-label="Previous"
+					className="left carousel-control"
+					onClick={onPrev}
+					onMouseDown={() => onPositionNonActiveSlots('left')}
+				>
+					<ChevronLeft />
+				</button>
+				<button
+					aria-label="Next"
+					className="right carousel-control"
+					onClick={onNext}
+					onMouseDown={() => onPositionNonActiveSlots('right')}
+				>
+					<ChevronRight />
+				</button>
+			</>}
 		</div>
 	);
 };

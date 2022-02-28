@@ -1,0 +1,17 @@
+[{
+    "header": "USA and Canadian HiFi",
+    "desc": "<a href='https://www.drupal.org/'>Drupal</a> 6 site using the <a href='https://www.drupal.org/project/ubercart'>Ubercart</a> e-commerce modules. The customer can create sale items with badges automatically added to product images. International currencies, taxes, and shipping are dynamically handled depending on locale of the shopper. Multiple language support. Same database and Drupal framework support both the United States and Canada sites. The site seen is determined by URL.",
+    "items": [{
+            "imgSrc": "portfolio/web/hifi/usa-hifi-home.jpg",
+            "imgThumbnailSrc": "portfolio/web/hifi/usa-hifi-home-thumbnail.jpg",
+            "imgAlt": "USA HiFi Home Page",
+            "title": "USA HiFi Home Page"
+        },
+        {
+            "imgSrc": "portfolio/web/hifi/canadian-hifi-home.jpg",
+            "imgThumbnailSrc": "portfolio/web/hifi/canadian-hifi-home-thumbnail.jpg",
+            "imgAlt": "Canadian HiFi Home Page",
+            "title": "Canadian HiFi Home Page"
+        }
+    ]
+}]
