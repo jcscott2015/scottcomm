@@ -169,12 +169,12 @@ const Carousel = (props: ICarouselProps) => {
 			onPositionNonActiveSlots('left');
 			setTimeout(() => {
 				onPrev(undefined, jumpToIndex);
-			}, 10);
+			}, 6);
 		} else if (jumpToIndex > activeIndex) {
 			onPositionNonActiveSlots('right');
 			setTimeout(() => {
 				onNext(undefined, jumpToIndex);
-			}, 10);
+			}, 6);
 		}
 	};
 
@@ -184,9 +184,9 @@ const Carousel = (props: ICarouselProps) => {
 	useInterval(() => {
 		setTimeout(() => {
 			onPositionNonActiveSlots('right');
-		}, 1000);
+		}, 600);
 		onNext(undefined);
-	}, looping ? props.autoPlay || null : null);
+	}, (looping && (carouselLen > 1)) ? props.autoPlay || null : null);
 
 	return (
 		<div
@@ -194,7 +194,7 @@ const Carousel = (props: ICarouselProps) => {
 			onMouseEnter={toggleAutoPlay}
 			onMouseLeave={toggleAutoPlay}
 		>
-			<ol className="carousel-indicators">
+			{(carouselLen > 1) && <ol className="carousel-indicators">
 				{props.carouselItems.map((v, i) => (
 					<CarouselIndicator
 						key={i}
@@ -202,7 +202,7 @@ const Carousel = (props: ICarouselProps) => {
 						className={carouselStates[i].active}
 					/>
 				))}
-			</ol>
+			</ol>}
 			<div className="carousel-inner" role="listbox">
 				{props.carouselItems.map((v, i) => (
 					<CarouselItem

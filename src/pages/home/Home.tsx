@@ -63,7 +63,7 @@ export const Home = (props: IHomeProps) => {
 		},
 		{
 			header: 'Hardware UI/UX',
-			content: '5 years at <a href="http://www.nvtl.com/">Novatel Wireless</a> designing and building user interfaces for MiFi commercial and consumer cellular routers. Part of team that developed a custom CMS and web server that operated on the MiFi\'s chip.',
+			content: '5 years at <a href="http://www.nvtl.com/">Novatel Wireless</a> designing and building user interfaces for MiFi commercial and consumer cellular routers. Part of team that developed a custom CMS and web server that operated on the MiFi&#8217;s chip.',
 			btnText: 'View details »',
 			btnHref: '/hardware'
 		},
