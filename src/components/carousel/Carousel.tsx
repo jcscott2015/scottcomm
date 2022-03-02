@@ -35,6 +35,11 @@ export interface ICarouselItems extends ICarouselItemProps {
 }
 
 const Carousel = (props: ICarouselProps) => {
+	const {
+		autoPlay,
+		carouselItems
+	} = props;
+
 	interface ICarouselState {
 		itemId?: number;
 		active?: '' | 'active';
@@ -186,7 +191,7 @@ const Carousel = (props: ICarouselProps) => {
 			onPositionNonActiveSlots('right');
 		}, 600);
 		onNext(undefined);
-	}, (looping && (carouselLen > 1)) ? props.autoPlay || null : null);
+	}, (looping && (carouselLen > 1)) ? autoPlay || null : null);
 
 	return (
 		<div
@@ -195,7 +200,7 @@ const Carousel = (props: ICarouselProps) => {
 			onMouseLeave={toggleAutoPlay}
 		>
 			{(carouselLen > 1) && <ol className="carousel-indicators">
-				{props.carouselItems.map((v, i) => (
+				{carouselItems && carouselItems.map((v, i) => (
 					<CarouselIndicator
 						key={i}
 						goToSlide={(e) => onGoToSlide(e, i)}
@@ -204,11 +209,15 @@ const Carousel = (props: ICarouselProps) => {
 				))}
 			</ol>}
 			<div className="carousel-inner" role="listbox">
-				{props.carouselItems.map((v, i) => (
+				{carouselItems.map((v, i) => (
 					<CarouselItem
 						key={i}
 						href={v.href}
-						className={[carouselStates[i].active, carouselStates[i].slide, carouselStates[i].slot].join(' ')}
+						className={[
+							carouselStates[i].active,
+							carouselStates[i].slide,
+							carouselStates[i].slot
+						].join(' ')}
 						thumbnailSrc={v.thumbnailSrc}
 						imageSrc={v.imageSrc}
 						imageAlt={v.imageAlt}
